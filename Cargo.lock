@@ -10889,6 +10889,7 @@ dependencies = [
  "indoc",
  "lightningcss",
  "once_cell",
+ "parcel_selectors",
  "parcel_sourcemap",
  "regex",
  "serde",
