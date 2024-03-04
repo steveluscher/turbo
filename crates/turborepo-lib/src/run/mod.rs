@@ -77,7 +77,8 @@ pub struct Run {
 }
 
 impl Run {
-    pub fn new(base: CommandBase, api_auth: Option<APIAuth>) -> Result<Self, Error> {
+    pub fn new(base: CommandBase) -> Result<Self, Error> {
+        let api_auth = base.api_auth()?;
         let processes = ProcessManager::infer();
         let mut opts: Opts = base.args().try_into()?;
         let config = base.config()?;
